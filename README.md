@@ -15,3 +15,12 @@ Current GLADE space usage: abanihi
 
 /glade/scratch  - 38.1% used (5712 TB used out of 15000 TB total)
 ```
+
+## 2. Using environment modules 
+
+- `module add/remove <software>`
+- `module avail`: show all currently-loadable modules 
+- `module list` : show loaded modules 
+- `module purge` : remove all loaded modules 
+- `module save/restore <name>` : create/load a saved set of software 
+- `module spider <software>` : search for a particular module
