@@ -44,3 +44,19 @@ Current GLADE space usage: abanihi
 - `execca -A <project>` : 
 - `execgy -A <project>` : 
 - `execgpu -A <project>` :
+
+## 4. Accessing Geyser, and Caldera using the Slurm scheduler
+
+### 4.1. Basic commands for managing jobs when using Slurm 
+
+- `squeue -u $USER`: list your current job
+- `scontrol show job <ID>` : examine a job in detail
+- `scancel <ID>` : kill a job 
+
+### 4.2. Starting interactive jobs 
+
+- `execgy -a <project>` : run on a geyser node 
+- `execca -a <project>` : run on a caldera node 
+- `execdav -a <project>` : run on the first available DAV resources (caldera, geyser), regardless of location 
+
+
