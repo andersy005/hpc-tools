@@ -24,3 +24,23 @@ Current GLADE space usage: abanihi
 - `module purge` : remove all loaded modules 
 - `module save/restore <name>` : create/load a saved set of software 
 - `module spider <software>` : search for a particular module
+
+## 3. Interacting with the job schedulers
+
+### 3.1 PBS on Cheyenne
+
+- `qsub <script>` : submit batch job
+- `qstat <jobid>` : query job status 
+- `qdel <jobid>` : delete/kill a job
+- `qinteractive -A <project>` : Run an interactive job 
+- `qcmd -A <project> -- cmd.exe` : Run a command on a single compute node 
+
+### 3.2 Slurm on DAV 
+
+- `sbatch <script>` : Submit batch job 
+- `squeue -j <jobid>` : query job status
+- `scancel <jobid>` : delete/kill a job 
+- `execdev -A <project>` : Run interactive job on DAV
+- `execca -A <project>` : 
+- `execgy -A <project>` : 
+- `execgpu -A <project>` :
