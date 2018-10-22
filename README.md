@@ -34,6 +34,7 @@ Current GLADE space usage: abanihi
 - `qdel <jobid>` : delete/kill a job
 - `qinteractive -A <project>` : Run an interactive job 
 - `qcmd -A <project> -- cmd.exe` : Run a command on a single compute node 
+- `qselect -u <username> | xargs qdel` : delete all my jobs at once, not one at a time
 
 ### 3.2 Slurm on DAV 
 
