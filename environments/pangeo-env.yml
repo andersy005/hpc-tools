@@ -20,14 +20,14 @@ dependencies:
   - holoviews
   - hvplot
   - intake
-  - iris 
+  - iris
   - iris-sample-data
   - importnb
   - intake-xarray
   - ipywidgets
   - jupyter
   - jupyterlab
-  - jupyter_contrib_nbextensions 
+  - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
   - lz4
   - matplotlib
@@ -47,11 +47,11 @@ dependencies:
   - scikit-learn
   - scipy
   - tensorflow
-  - unyt 
+  - unyt
   - xarray
   - xonsh
   - xo
-  - yt 
+  - yt
   - zarr
   - twine
   - wheel
@@ -59,9 +59,9 @@ dependencies:
   - numpydoc
   - sphinx_rtd_theme
   - pip:
-     - bash_kernel
-     - version-information
-     - xonsh_kernel
+      - bash_kernel
+      - version-information
+      - xonsh_kernel
 #    - kubernetes
 #    - git+https://github.com/dask/dask-kubernetes.git
 #    - git+https://github.com/xgcm/xgcm.git
