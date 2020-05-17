@@ -50,7 +50,7 @@ def stream_command(cmd, shell=False, no_newline_regexp='Progess'):
 def job():
     builder_dir = '/glade/collections/cmip/catalog/intake-esm-datastore/builders'
     with chdir(builder_dir):
-        cmd = 'git pull upstream master && source activate esm-catalog-builder && python cmip.py --root-path /glade/collections/cmip/CMIP6 --pick-latest-version --cmip-version 6 --csv-filepath ../catalogs/glade-cmip6.csv.gz --depth 4'
+        cmd = 'git pull origin master && source activate esm-catalog-builder && python cmip.py --root-path /glade/collections/cmip/CMIP6 --pick-latest-version --cmip-version 6 --csv-filepath ../catalogs/glade-cmip6.csv.gz --depth 4'
         for line in stream_command(cmd, shell=True):
             print(line, end='')
 
