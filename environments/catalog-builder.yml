@@ -1,0 +1,13 @@
+name: esm-catalog-builder
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - intake
+  - pandas
+  - dask
+  - requests
+  - click
+  - pip
+  - pip:
+      - schedule
