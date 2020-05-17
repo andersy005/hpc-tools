@@ -48,7 +48,7 @@ def stream_command(cmd, shell=False, no_newline_regexp='Progess'):
 
 
 def job():
-    builder_dir = '/glade/u/home/abanihi/work/devel/ncar/intake-esm-datastore/builders'
+    builder_dir = '/glade/collections/cmip/catalog/intake-esm-datastore/builders'
     with chdir(builder_dir):
         cmd = 'git pull upstream master && source activate esm-catalog-builder && python cmip.py --root-path /glade/collections/cmip/CMIP6 --pick-latest-version --cmip-version 6 --csv-filepath ../catalogs/glade-cmip6.csv.gz --depth 4'
         for line in stream_command(cmd, shell=True):
@@ -63,7 +63,7 @@ def job():
         with open('../catalogs/glade-cmip6.json', 'w') as f:
             json.dump(data, f)
 
-    with chdir('/glade/u/home/abanihi/work/devel/ncar/intake-esm-datastore/catalogs'):
+    with chdir('/glade/collections/cmip/catalog/intake-esm-datastore/catalogs'):
         commit_message = f'Scheduled CMIP6 catalog update: {last_updated}'
         cmd = 'source activate base && git add . && pre-commit run'
         try:
