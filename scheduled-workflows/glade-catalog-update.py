@@ -76,8 +76,8 @@ def job():
             print(line, end='')
 
 
-schedule.every().day.at('01:30').do(job)
+schedule.every(2).day.at('04:30').do(job)
 
 while True:
     schedule.run_pending()
-    time.sleep(86000)
+    time.sleep(1)
