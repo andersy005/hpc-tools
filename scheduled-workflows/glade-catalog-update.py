@@ -76,7 +76,7 @@ def job():
             print(line, end='')
 
 
-schedule.every(2).day.at('04:30').do(job)
+schedule.every(3).days.at('04:45').do(job)
 
 while True:
     schedule.run_pending()
