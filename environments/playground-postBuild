@@ -1,0 +1,12 @@
+#!/bin/bash
+
+jupyter labextension install \
+                            @jupyter-widgets/jupyterlab-manager \
+                            dask-labextension jupyterlab-nvdashboard \
+                            @jupyter-widgets/jupyterlab-sidecar bqplot \
+                            jupyter-threejs jupyter-leaflet@0.12.6 ipysheet \
+                            ipytree ipycanvas jupyter-matplotlib jupyter-vuetify ipyvolume \
+                            @jupyter-voila/jupyterlab-preview @pyviz/jupyterlab_pyviz
+
+
+#EOF
