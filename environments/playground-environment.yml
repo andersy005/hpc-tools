@@ -10,6 +10,7 @@ dependencies:
   - bqplot
   - c-compiler
   - cartopy
+  - cmip6_preprocessing
   - cmocean
   - compilers
   - cudatoolkit=10.2
@@ -19,9 +20,11 @@ dependencies:
   - dask
   - dask-jobqueue
   - dask-labextension
+  - datashader
   - distributed
   - fortran-compiler
   - gcsfs
+  - geoviews
   - graphviz
   - hvplot
   - intake
@@ -40,9 +43,9 @@ dependencies:
   - jaxlib
   - jupyterlab
   - jupyterlab-nvdashboard
+  # - libnetcdf=4.7.4=*_105
   - line_profiler
   - matplotlib
-  - libnetcdf=4.7.4=*_105
   - nodejs
   - numba
   - pip
@@ -60,12 +63,11 @@ dependencies:
   - scipy
   - seaborn
   - sidecar
-  - datashader
+  - spatialpandas
   - tqdm
   - voila-vuetify
   - voila=0.1
   - xarray
+  - xrft
   - zarr
-  - cmip6_preprocessing
-  - geoviews
-  - spatialpandas
+  - xesmf
