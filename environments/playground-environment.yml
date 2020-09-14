@@ -4,6 +4,7 @@ channels:
   - pytorch
   - defaults
 dependencies:
+  # - libnetcdf=4.7.4=*_105
   - arviz
   - binutils-meta
   - bokeh
@@ -15,7 +16,7 @@ dependencies:
   - compilers
   - cudatoolkit=10.2
   - cupy
-  - cxx-compiler
+  - cxx-compiler 
   - cython
   - dask
   - dask-jobqueue
@@ -24,6 +25,8 @@ dependencies:
   - distributed
   - fortran-compiler
   - gcsfs
+  - geemap
+  - geoviews
   - geoviews
   - graphviz
   - hvplot
@@ -43,13 +46,16 @@ dependencies:
   - jaxlib
   - jupyterlab
   - jupyterlab-nvdashboard
-  # - libnetcdf=4.7.4=*_105
+  - libopencv 
   - line_profiler
   - matplotlib
   - nodejs
   - numba
+  - opencv 
+  - panel
   - pip
   - proplot
+  - py-opencv
   - pyjanitor
   - pymc3
   - pysnooper
@@ -57,17 +63,27 @@ dependencies:
   - python=3.7
   - pythreejs
   - pytorch
+  - pyvista
   - pywwt
+  - redis
+  - redis-py
   - s3fs
   - scikit-learn
   - scipy
   - seaborn
   - sidecar
+  - spacy
   - spatialpandas
+  - spatialpandas
+  - tensorboard
+  - torchvision
   - tqdm
   - voila-vuetify
   - voila=0.1
+  - vtk
   - xarray
+  - xesmf
   - xrft
   - zarr
-  - xesmf
+  - pip:
+      - sktime
