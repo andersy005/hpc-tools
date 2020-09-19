@@ -2,6 +2,7 @@ name: playground
 channels:
   - conda-forge
   - pytorch
+  - fastai
   - defaults
 dependencies:
   # - libnetcdf=4.7.4=*_105
@@ -23,6 +24,7 @@ dependencies:
   - dask-labextension
   - datashader
   - distributed
+  - fastai
   - fortran-compiler
   - gcsfs
   - geemap
@@ -87,3 +89,6 @@ dependencies:
   - zarr
   - pip:
       - sktime
+      - handcalcs
+      - git+https://github.com/holoviz/hvplot.git@interactive_api
+      - git+https://github.com/intake/intake-esm.git
