@@ -28,15 +28,23 @@ def build(c):
     with chdir(f'{main_repo}/builders'):
 
         catalog_path = '../catalogs/glade-cmip6.csv.gz'
-        command = f'git pull origin master && source activate esm-catalog-builder && python cmip.py --root-path /glade/collections/cmip/CMIP6 --pick-latest-version --cmip-version 6 --csv-filepath {catalog_path} --depth 4'
+        command = f"""git pull origin master && source activate esm-catalog-builder &&
+                       python cmip.py --root-path /glade/collections/cmip/CMIP6 \
+                                      --pick-latest-version \
+                                      --cmip-version 6 \
+                                      --csv-filepath {catalog_path} \
+                                      --depth 4"""
         c.run(command)
 
         command = f'git diff --text {catalog_path} 2>/dev/null | wc -l'
         output = c.run(command).stdout
         if int(output) > 0:
-            with open('../catalogs/glade-cmip6.json', 'rw') as f:
+            path = '../catalogs/glade-cmip6.json'
+            with open(path, 'r') as f:
                 data = json.load(f)
                 data['last_updated'] = last_updated
+
+            with open(path, 'w') as f:
                 json.dump(data, f)
 
 

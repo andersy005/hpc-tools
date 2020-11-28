@@ -8,7 +8,7 @@ dependencies:
   # - libnetcdf=4.7.4=*_105
   - arviz
   - binutils-meta
-  - bokeh
+  - bokeh>=2.2.3
   - bqplot
   - c-compiler
   - cartopy
@@ -16,59 +16,64 @@ dependencies:
   - cmocean
   - compilers
   - cudatoolkit=10.2
-  - cupy
-  - cxx-compiler 
+  - cupy>=8.1.0
+  - cxx-compiler
   - cython
-  - dask
   - dask-jobqueue
   - dask-labextension
+  - dask>=2.30
   - datashader
-  - distributed
+  - distributed>=2.30
   - fastai
   - fortran-compiler
   - gcsfs
   - geemap
   - geoviews
-  - geoviews
   - graphviz
   - hvplot
   - intake
-  - intake-esm
+  - intake-esm>=2020.11.4
   - intake-xarray
   - ipycanvas
   - ipyevents
-  - ipyleaflet=0.12.6
+  - ipyleaflet>=0.12.6
   - ipympl
   - ipysheet
   - ipytree
-  - ipyvolume=0.6.0a6
+  - ipyvolume>=0.6.0a6
   - ipyvuetify
   - ipywidgets
   - jax
   - jaxlib
+  - jupyter-lsp
   - jupyterlab
   - jupyterlab-nvdashboard
-  - libopencv 
+  - kaggle
+  - libopencv
   - line_profiler
   - matplotlib
+  - nc-time-axis
   - nodejs
-  - numba
-  - opencv 
+  - numba>=0.51.2
+  - numpyro
+  - opencv
   - panel
   - pip
   - proplot
   - py-opencv
   - pyjanitor
-  - pymc3
+  - pymc3>=3.9
   - pysnooper
   - python-graphviz
-  - python=3.7
+  - python-language-server
+  - python=3.8
   - pythreejs
-  - pytorch
+  - pytorch>=1.7.0
   - pyvista
   - pywwt
   - redis
   - redis-py
+  - regionmask
   - s3fs
   - scikit-learn
   - scipy
@@ -76,19 +81,17 @@ dependencies:
   - sidecar
   - spacy
   - spatialpandas
-  - spatialpandas
   - tensorboard
   - torchvision
   - tqdm
   - voila-vuetify
-  - voila=0.1
+  - voila>=0.1
   - vtk
-  - xarray
-  - xesmf
+  - xarray>=0.16
+  - xesmf>=0.4
   - xrft
-  - zarr
+  - zarr>=2.5
   - pip:
-      - sktime
       - handcalcs
-      - git+https://github.com/holoviz/hvplot.git@interactive_api
-      - git+https://github.com/intake/intake-esm.git
+      - scalene
+      - sktime

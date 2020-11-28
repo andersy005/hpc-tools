@@ -2,11 +2,10 @@ import json
 import os
 import re
 import subprocess
-import time
 from contextlib import contextmanager
 from datetime import datetime
 
-import schedule
+# import schedule
 
 
 @contextmanager
@@ -25,16 +24,16 @@ def chdir(path):
 
 def stream_command(cmd, shell=False, no_newline_regexp='Progess'):
     """stream a command (yield) back to the user, as each line is available.
-       # Example usage:
-       results = []
-       for line in stream_command(cmd):
-           print(line, end="")
-           results.append(line)
-       Parameters
-       ==========
-       cmd: the command to send, should be a list for subprocess
-       no_newline_regexp: the regular expression to determine skipping a
-                          newline. Defaults to finding Progress
+    # Example usage:
+    results = []
+    for line in stream_command(cmd):
+        print(line, end="")
+        results.append(line)
+    Parameters
+    ==========
+    cmd: the command to send, should be a list for subprocess
+    no_newline_regexp: the regular expression to determine skipping a
+                       newline. Defaults to finding Progress
 
     """
     process = subprocess.Popen(cmd, shell=shell, stdout=subprocess.PIPE, universal_newlines=True)
@@ -50,7 +49,12 @@ def stream_command(cmd, shell=False, no_newline_regexp='Progess'):
 def job():
     builder_dir = '/glade/collections/cmip/catalog/intake-esm-datastore/builders'
     with chdir(builder_dir):
-        cmd = 'git pull origin master && source activate esm-catalog-builder && python cmip.py --root-path /glade/collections/cmip/CMIP6 --pick-latest-version --cmip-version 6 --csv-filepath ../catalogs/glade-cmip6.csv.gz --depth 4'
+        cmd = """git pull origin master && conda activate esm-catalog-builder &&
+                  python cmip.py --root-path /glade/collections/cmip/CMIP6 \
+                       --pick-latest-version \
+                       --cmip-version 6 \
+                        --csv-filepath ../catalogs/glade-cmip6.csv.gz \
+                        --depth 4"""
         for line in stream_command(cmd, shell=True):
             print(line, end='')
 
@@ -76,8 +80,11 @@ def job():
             print(line, end='')
 
 
-schedule.every(3).days.at('04:45').do(job)
+# schedule.every(3).days.at('04:45').do(job)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#    schedule.run_pending()
+#    time.sleep(1)
+
+if __name__ == '__main__':
+    job()
