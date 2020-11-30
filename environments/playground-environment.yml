@@ -1,9 +1,9 @@
 name: playground
 channels:
+  - nvidia
   - conda-forge
   - pytorch
   - fastai
-  - defaults
 dependencies:
   # - libnetcdf=4.7.4=*_105
   - arviz
@@ -16,6 +16,7 @@ dependencies:
   - cmocean
   - compilers
   - cudatoolkit=10.2
+  - cudnn
   - cupy>=8.1.0
   - cxx-compiler
   - cython
@@ -51,7 +52,10 @@ dependencies:
   - kaggle
   - libopencv
   - line_profiler
+  - mamba_gator
   - matplotlib
+  - mkl
+  - mkl-service
   - nc-time-axis
   - nodejs
   - numba>=0.51.2
@@ -82,15 +86,18 @@ dependencies:
   - spacy
   - spatialpandas
   - tensorboard
+  - theano
   - torchvision
   - tqdm
   - voila-vuetify
   - voila>=0.1
   - vtk
+  - watermark
   - xarray>=0.16
   - xesmf>=0.4
   - xrft
   - zarr>=2.5
+  # - theano-pymc
   - pip:
       - handcalcs
       - scalene

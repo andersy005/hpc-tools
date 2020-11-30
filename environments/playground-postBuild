@@ -7,7 +7,7 @@ jupyter labextension install \
                             jupyter-threejs jupyter-leaflet ipysheet \
                             ipytree ipycanvas jupyter-matplotlib jupyter-vuetify ipyvolume \
                             @jupyter-voila/jupyterlab-preview @pyviz/jupyterlab_pyviz \
-                            @krassowski/jupyterlab-lsp
+                            @krassowski/jupyterlab-lsp @mamba-org/gator-lab
 
 
 #EOF
